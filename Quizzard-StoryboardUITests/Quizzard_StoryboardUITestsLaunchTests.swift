@@ -2,8 +2,6 @@
 //  Quizzard_StoryboardUITestsLaunchTests.swift
 //  Quizzard-StoryboardUITests
 //
-//  Created by Leon Staszak on 27/03/2025.
-//
 
 import XCTest
 

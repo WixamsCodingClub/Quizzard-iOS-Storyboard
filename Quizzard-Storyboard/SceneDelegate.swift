@@ -2,8 +2,6 @@
 //  SceneDelegate.swift
 //  Quizzard-Storyboard
 //
-//  Created by Leon Staszak on 27/03/2025.
-//
 
 import UIKit
 

@@ -1,13 +1,11 @@
 //
-//  ViewController.swift
+//  WelcomeViewController.swift
 //  Quizzard-Storyboard
-//
-//  Created by Leon Staszak on 27/03/2025.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class WelcomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

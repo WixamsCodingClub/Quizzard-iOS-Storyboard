@@ -7,7 +7,7 @@ import Foundation
 
 enum QError: Error {
     case network(message: String)
-    case jsonDecoding
+    case jsonDecoding(message: String)
     case user(message: String)
 }
 
@@ -17,9 +17,8 @@ extension QError: LocalizedError {
     
     var errorDescription: String? {
         switch self {
-        case .jsonDecoding:
-            return "The data is not in the correct format."
-        case .network(let message),
+        case .jsonDecoding(let message),
+                .network(let message),
                 .user(let message):
             return message
         }

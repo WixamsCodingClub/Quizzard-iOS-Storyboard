@@ -7,6 +7,14 @@ import Foundation
 
 class RunUtilities {
     
+    class var isDebug: Bool {
+#if DEBUG
+        return true
+#else
+        return false
+#endif
+    }
+    
     class func runOnMain(_ block: @escaping () -> Void) {
         if Thread.isMainThread {
             block()

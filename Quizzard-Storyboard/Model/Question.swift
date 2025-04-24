@@ -8,7 +8,11 @@ struct Question: Decodable {
     let category: Category
     let tags: [String]
     let difficulty: Difficulty
-    let question: String
+    let question: QuestionText
     let correctAnswer: String
     let incorrectAnswers: [String]
+}
+
+struct QuestionText: Decodable {
+    let text: String
 }

@@ -36,6 +36,9 @@ Please tap the button below to start a new game.</string>
                                 <rect key="frame" x="146" y="339" width="101" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Start Quiz"/>
+                                <connections>
+                                    <action selector="startQuizButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9nx-QP-FkJ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

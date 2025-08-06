@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Welcome View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="WelcomeViewController" customModule="Quizzard_Storyboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quizzard" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V9u-t0-GHO">
+                                <rect key="frame" x="20" y="158" width="353" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fhm-Tf-Dji">
+                                <rect key="frame" x="40" y="236" width="313" height="122"/>
+                                <string key="text">Welcome to Quizzard, the fun trivia game developed by the Wixams Coding Club.
+
+Please tap the button below to start a new game.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sJe-Vf-gee">
+                                <rect key="frame" x="146.33333333333334" y="398" width="100.33333333333334" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Start Quiz"/>
+                                <connections>
+                                    <action selector="startQuizButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9nx-QP-FkJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fhm-Tf-Dji" secondAttribute="trailing" constant="40" id="0fp-tC-ooK"/>
+                            <constraint firstItem="V9u-t0-GHO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="FpX-3i-ug4"/>
+                            <constraint firstItem="fhm-Tf-Dji" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="ROX-gx-ezc"/>
+                            <constraint firstItem="sJe-Vf-gee" firstAttribute="top" secondItem="fhm-Tf-Dji" secondAttribute="bottom" constant="40" id="YZx-Tr-x5A"/>
+                            <constraint firstItem="V9u-t0-GHO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ffC-i5-qiL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="V9u-t0-GHO" secondAttribute="trailing" constant="20" id="geW-QL-K21"/>
+                            <constraint firstItem="sJe-Vf-gee" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="iG1-cQ-WRt"/>
+                            <constraint firstItem="fhm-Tf-Dji" firstAttribute="top" secondItem="V9u-t0-GHO" secondAttribute="bottom" constant="30" id="zyp-XP-uXK"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="-34"/>
+        </scene>
+        <!--Question View Controller-->
+        <scene sceneID="TzK-jm-taE">
+            <objects>
+                <viewController id="suZ-UT-au9" customClass="QuestionViewController" customModule="Quizzard_Storyboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TfF-Ua-lEL">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5bt-mc-MVD">
+                                <rect key="frame" x="39.333333333333343" y="118" width="314.33333333333326" height="178"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rlR-Kv-wh0">
+                                        <rect key="frame" x="0.0" y="0.0" width="314.33333333333331" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question text?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9s9-kY-AHG">
+                                        <rect key="frame" x="0.0" y="20.333333333333343" width="314.33333333333331" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VS2-MW-2Xl" customClass="AnswerButton" customModule="Quizzard_Storyboard" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="40.666666666666657" width="314.33333333333331" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LI9-Ye-o8S" customClass="AnswerButton" customModule="Quizzard_Storyboard" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="75" width="314.33333333333331" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mY7-1w-pMo" customClass="AnswerButton" customModule="Quizzard_Storyboard" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="109.33333333333334" width="314.33333333333331" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1HK-uW-ROT" customClass="AnswerButton" customModule="Quizzard_Storyboard" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="143.66666666666669" width="314.33333333333331" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A0y-Ap-0GK">
+                                <rect key="frame" x="159" y="749.66666666666663" width="75" height="34.333333333333371"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jIC-xX-Res"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5bt-mc-MVD" firstAttribute="top" secondItem="jIC-xX-Res" secondAttribute="top" constant="1.4210854715202004e-14" id="B6f-48-92s"/>
+                            <constraint firstItem="5bt-mc-MVD" firstAttribute="width" secondItem="jIC-xX-Res" secondAttribute="width" multiplier="0.8" id="LfZ-Au-ExA"/>
+                            <constraint firstItem="A0y-Ap-0GK" firstAttribute="centerX" secondItem="jIC-xX-Res" secondAttribute="centerX" id="rc2-yG-52x"/>
+                            <constraint firstItem="jIC-xX-Res" firstAttribute="bottom" secondItem="A0y-Ap-0GK" secondAttribute="bottom" id="xxC-Nb-WtH"/>
+                            <constraint firstItem="5bt-mc-MVD" firstAttribute="centerX" secondItem="jIC-xX-Res" secondAttribute="centerX" id="zSJ-5M-7VY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="04g-Nh-US7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j2w-Ek-CA3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1265" y="-156"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

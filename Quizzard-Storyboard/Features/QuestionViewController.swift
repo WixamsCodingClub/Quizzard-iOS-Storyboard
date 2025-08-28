@@ -68,12 +68,13 @@ class QuestionViewController: UIViewController {
     }
     
     @IBAction func nextButtonTapped(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if quizData!.isQuizFinished {
-            let resultsVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ResultsViewController") as! ResultsViewController
+            let resultsVC = storyboard.instantiateViewController(withIdentifier: "ResultsViewController") as! ResultsViewController
             resultsVC.quizData = quizData
             navigationController?.pushViewController(resultsVC, animated: true)
         } else {
-            let questionVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "QuestionViewController") as! QuestionViewController
+            let questionVC = storyboard.instantiateViewController(withIdentifier: "QuestionViewController") as! QuestionViewController
             questionVC.quizData = quizData
             navigationController?.pushViewController(questionVC, animated: true)
         }

@@ -5,7 +5,7 @@ import UIKit
 // - Set all styling
 
 enum AnswerState {
-    case unanswered, answeredCorrectly, answeredIncorrectly
+    case unanswered, answeredCorrectly, answeredIncorrectly, unansweredCorrect
 }
 
 class AnswerButton: UIButton {
@@ -45,6 +45,8 @@ extension AnswerButton {
             backgroundColor = .green
         case .answeredIncorrectly:
             backgroundColor = .red
+        case .unansweredCorrect:
+            backgroundColor = .orange
         }
     }
     

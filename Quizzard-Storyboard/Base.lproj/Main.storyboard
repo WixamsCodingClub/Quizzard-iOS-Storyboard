@@ -65,7 +65,7 @@ Please tap the button below to start a new game.</string>
         <!--Question View Controller-->
         <scene sceneID="TzK-jm-taE">
             <objects>
-                <viewController id="suZ-UT-au9" customClass="QuestionViewController" customModule="Quizzard_Storyboard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QuestionViewController" id="suZ-UT-au9" customClass="QuestionViewController" customModule="Quizzard_Storyboard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TfF-Ua-lEL">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -83,28 +83,43 @@ Please tap the button below to start a new game.</string>
                                         <rect key="frame" x="0.0" y="30.333333333333346" width="314.33333333333331" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="answerButtonTapped:" destination="suZ-UT-au9" eventType="touchUpInside" id="dmg-Ku-AsP"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LI9-Ye-o8S" customClass="AnswerButton" customModule="Quizzard_Storyboard" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="74.666666666666657" width="314.33333333333331" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="answerButtonTapped:" destination="suZ-UT-au9" eventType="touchUpInside" id="I0t-Od-juK"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mY7-1w-pMo" customClass="AnswerButton" customModule="Quizzard_Storyboard" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="118.99999999999999" width="314.33333333333331" height="34.333333333333329"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="answerButtonTapped:" destination="suZ-UT-au9" eventType="touchUpInside" id="Vba-dp-8fq"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1HK-uW-ROT" customClass="AnswerButton" customModule="Quizzard_Storyboard" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="163.33333333333331" width="314.33333333333331" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="answerButtonTapped:" destination="suZ-UT-au9" eventType="touchUpInside" id="FuM-L3-MBQ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A0y-Ap-0GK">
-                                <rect key="frame" x="159" y="783.66666666666663" width="75" height="34.333333333333371"/>
+                                <rect key="frame" x="166.66666666666666" y="783.66666666666663" width="59.666666666666657" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Next"/>
+                                <connections>
+                                    <action selector="nextButtonTapped:" destination="suZ-UT-au9" eventType="touchUpInside" id="3fn-N1-bOg"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jIC-xX-Res"/>
@@ -121,6 +136,7 @@ Please tap the button below to start a new game.</string>
                     <connections>
                         <outlet property="firstAnswerButton" destination="VS2-MW-2Xl" id="xbb-EZ-ocl"/>
                         <outlet property="fourthAnswerButton" destination="1HK-uW-ROT" id="u8V-RZ-Sc8"/>
+                        <outlet property="nextQuestionButton" destination="A0y-Ap-0GK" id="rMj-qL-MBc"/>
                         <outlet property="questionTextLabel" destination="9s9-kY-AHG" id="9Bs-vW-3cu"/>
                         <outlet property="secondAnswerButton" destination="LI9-Ye-o8S" id="W7k-KH-abM"/>
                         <outlet property="thirdAnswerButton" destination="mY7-1w-pMo" id="Fsq-Gz-MtJ"/>
@@ -128,7 +144,7 @@ Please tap the button below to start a new game.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j2w-Ek-CA3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2191.6030534351144" y="-156.33802816901408"/>
+            <point key="canvasLocation" x="2230" y="-184"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="b7b-YD-41S">

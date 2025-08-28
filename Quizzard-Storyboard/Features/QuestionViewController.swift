@@ -14,6 +14,9 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var thirdAnswerButton: AnswerButton!
     @IBOutlet weak var fourthAnswerButton: AnswerButton!
     
+    @IBOutlet weak var nextQuestionButton: UIButton!
+    
+    
 //    var delegate: QuestionViewControllerDelegate?
     
 //    var questions: [Question] = []
@@ -21,6 +24,7 @@ class QuestionViewController: UIViewController {
     var quizData: QuizData? = nil
     
     private let correctAnswerIndex = Int.random(in: 0...3)
+    private var allAnswerButtons: [AnswerButton] = []
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +41,42 @@ class QuestionViewController: UIViewController {
         secondAnswerButton.setTitle(allAnswers[1], for: .normal)
         thirdAnswerButton.setTitle(allAnswers[2], for: .normal)
         fourthAnswerButton.setTitle(allAnswers[3], for: .normal)
+        
+        allAnswerButtons = [firstAnswerButton, secondAnswerButton, thirdAnswerButton, fourthAnswerButton]
+        
+        nextQuestionButton.isEnabled = false
+    }
+    
+    @IBAction func answerButtonTapped(_ sender: Any) {
+        
+        guard let selectedButton = sender as? AnswerButton, let selectedButtonIndex = allAnswerButtons.firstIndex(of: selectedButton) else { return }
+        
+        // TODO: Disable buttons
+        
+        let isCorrect = selectedButtonIndex == correctAnswerIndex
+        
+        if isCorrect {
+            selectedButton.answerState = .answeredCorrectly
+        } else {
+            selectedButton.answerState = .answeredIncorrectly
+            allAnswerButtons[correctAnswerIndex].answerState = .unansweredCorrect
+        }
+        
+        quizData?.didAnswerCorrectly(correct: isCorrect)
+        allAnswerButtons.forEach{ $0.isEnabled = false }
+        nextQuestionButton.isEnabled = true
+    }
+    
+    @IBAction func nextButtonTapped(_ sender: Any) {
+        if quizData!.isQuizFinished {
+            // TODO: Show results screen
+        } else {
+            let questionVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "QuestionViewController") as! QuestionViewController
+            questionVC.quizData = quizData
+            navigationController?.pushViewController(questionVC, animated: true)
+        }
+        
+        
     }
     
 }

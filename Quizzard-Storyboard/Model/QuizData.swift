@@ -18,10 +18,17 @@ class QuizData {
         return currentQuestionIndex + 1
     }
     
-    var isLastQuestion: Bool {
-        return currentQuestionIndex == questions.count + 1
+    /// Returns `true` if the current question index is beyond the range of questions.
+    var isQuizFinished: Bool {
+        return currentQuestionIndex >= questions.count
     }
     
-    // When incrementing the question  numebr don't allow it to go above the number of questions
+    /// Increments the running score and sets the current question number
+    func didAnswerCorrectly(correct: Bool) {
+        if correct {
+            correctAnswers += 1
+        }
+        currentQuestionIndex += 1
+    }
     
 }

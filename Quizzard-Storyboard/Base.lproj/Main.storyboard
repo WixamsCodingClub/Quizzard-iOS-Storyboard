@@ -146,6 +146,36 @@ Please tap the button below to start a new game.</string>
             </objects>
             <point key="canvasLocation" x="2230" y="-184"/>
         </scene>
+        <!--Results View Controller-->
+        <scene sceneID="1vf-xV-alC">
+            <objects>
+                <viewController storyboardIdentifier="ResultsViewController" id="DbI-AB-d3k" customClass="ResultsViewController" customModule="Quizzard_Storyboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hpe-BS-8Qk">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hzC-RM-TWc">
+                                <rect key="frame" x="175.66666666666674" y="441.66666666666674" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Qvu-ik-dZZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hzC-RM-TWc" firstAttribute="centerX" secondItem="Qvu-ik-dZZ" secondAttribute="centerX" id="4mT-LX-rGG"/>
+                            <constraint firstItem="hzC-RM-TWc" firstAttribute="centerY" secondItem="Qvu-ik-dZZ" secondAttribute="centerY" id="lM2-sN-RuS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scoreLabel" destination="hzC-RM-TWc" id="cfF-TT-d3A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u22-gk-JGc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1914" y="679"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="b7b-YD-41S">
             <objects>

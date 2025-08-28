@@ -23,6 +23,10 @@ class QuizData {
         return currentQuestionIndex >= questions.count
     }
     
+    var score: String {
+        return "\(correctAnswers) / \(questions.count)"
+    }
+    
     /// Increments the running score and sets the current question number
     func didAnswerCorrectly(correct: Bool) {
         if correct {

@@ -27,6 +27,10 @@ class AnswerButton: UIButton {
     }
     
     private func initialise() {
+        layer.cornerRadius = 8.0
+        layer.borderWidth = 1.0
+        layer.borderColor = UIColor.black.cgColor
+        
         
         updateButtonStyle()
     }

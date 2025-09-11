@@ -9,8 +9,10 @@ class ResultsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        scoreLabel.text = quizData?.score
+        
+        guard let quizData = quizData else { return }
+        
+        scoreLabel.text = "You scored " + quizData.score
     }
 
 }

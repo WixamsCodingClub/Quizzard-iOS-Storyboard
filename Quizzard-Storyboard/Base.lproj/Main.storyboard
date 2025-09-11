@@ -71,42 +71,48 @@ Please tap the button below to start a new game.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5bt-mc-MVD">
-                                <rect key="frame" x="39.333333333333343" y="122.99999999999999" width="314.33333333333326" height="197.66666666666663"/>
+                                <rect key="frame" x="39.333333333333343" y="103.33333333333333" width="314.33333333333326" height="241.33333333333337"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FKJ-6B-lZy">
+                                        <rect key="frame" x="0.0" y="0.0" width="314.33333333333331" height="33.666666666666664"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question text?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9s9-kY-AHG">
-                                        <rect key="frame" x="0.0" y="0.0" width="314.33333333333331" height="20.333333333333332"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="0.0" y="43.666666666666671" width="314.33333333333331" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VS2-MW-2Xl" customClass="AnswerButton" customModule="Quizzard_Storyboard" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="30.333333333333346" width="314.33333333333331" height="34.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="74.000000000000014" width="314.33333333333331" height="34.333333333333329"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Answer Button 1"/>
                                         <connections>
                                             <action selector="answerButtonTapped:" destination="suZ-UT-au9" eventType="touchUpInside" id="dmg-Ku-AsP"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LI9-Ye-o8S" customClass="AnswerButton" customModule="Quizzard_Storyboard" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="74.666666666666657" width="314.33333333333331" height="34.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="118.33333333333333" width="314.33333333333331" height="34.333333333333329"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Answer Button 2"/>
                                         <connections>
                                             <action selector="answerButtonTapped:" destination="suZ-UT-au9" eventType="touchUpInside" id="I0t-Od-juK"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mY7-1w-pMo" customClass="AnswerButton" customModule="Quizzard_Storyboard" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="118.99999999999999" width="314.33333333333331" height="34.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="162.66666666666669" width="314.33333333333331" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Answer Button 3"/>
                                         <connections>
                                             <action selector="answerButtonTapped:" destination="suZ-UT-au9" eventType="touchUpInside" id="Vba-dp-8fq"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1HK-uW-ROT" customClass="AnswerButton" customModule="Quizzard_Storyboard" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="163.33333333333331" width="314.33333333333331" height="34.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="207" width="314.33333333333331" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Answer Button 4"/>
                                         <connections>
                                             <action selector="answerButtonTapped:" destination="suZ-UT-au9" eventType="touchUpInside" id="FuM-L3-MBQ"/>
                                         </connections>
@@ -121,12 +127,19 @@ Please tap the button below to start a new game.</string>
                                     <action selector="nextButtonTapped:" destination="suZ-UT-au9" eventType="touchUpInside" id="3fn-N1-bOg"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QiM-NK-tAy" userLabel="End Quiz Button">
+                                <rect key="frame" x="8" y="59" width="92.333333333333329" height="34.333333333333343"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="End Quiz"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jIC-xX-Res"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="5bt-mc-MVD" firstAttribute="top" secondItem="jIC-xX-Res" secondAttribute="top" constant="20" id="B6f-48-92s"/>
+                            <constraint firstItem="QiM-NK-tAy" firstAttribute="leading" secondItem="jIC-xX-Res" secondAttribute="leading" constant="8" id="BgE-tg-wlP"/>
                             <constraint firstItem="5bt-mc-MVD" firstAttribute="width" secondItem="jIC-xX-Res" secondAttribute="width" multiplier="0.8" id="LfZ-Au-ExA"/>
+                            <constraint firstItem="5bt-mc-MVD" firstAttribute="top" secondItem="QiM-NK-tAy" secondAttribute="bottom" constant="10" id="Owq-fV-lUZ"/>
+                            <constraint firstItem="QiM-NK-tAy" firstAttribute="top" secondItem="jIC-xX-Res" secondAttribute="top" id="ftz-He-BtN"/>
                             <constraint firstItem="A0y-Ap-0GK" firstAttribute="centerX" secondItem="jIC-xX-Res" secondAttribute="centerX" id="rc2-yG-52x"/>
                             <constraint firstItem="jIC-xX-Res" firstAttribute="bottom" secondItem="A0y-Ap-0GK" secondAttribute="bottom" id="xxC-Nb-WtH"/>
                             <constraint firstItem="5bt-mc-MVD" firstAttribute="centerX" secondItem="jIC-xX-Res" secondAttribute="centerX" id="zSJ-5M-7VY"/>
@@ -137,6 +150,7 @@ Please tap the button below to start a new game.</string>
                         <outlet property="firstAnswerButton" destination="VS2-MW-2Xl" id="xbb-EZ-ocl"/>
                         <outlet property="fourthAnswerButton" destination="1HK-uW-ROT" id="u8V-RZ-Sc8"/>
                         <outlet property="nextQuestionButton" destination="A0y-Ap-0GK" id="rMj-qL-MBc"/>
+                        <outlet property="questionNumberLabel" destination="FKJ-6B-lZy" id="aYi-3m-R8y"/>
                         <outlet property="questionTextLabel" destination="9s9-kY-AHG" id="9Bs-vW-3cu"/>
                         <outlet property="secondAnswerButton" destination="LI9-Ye-o8S" id="W7k-KH-abM"/>
                         <outlet property="thirdAnswerButton" destination="mY7-1w-pMo" id="Fsq-Gz-MtJ"/>
@@ -154,8 +168,8 @@ Please tap the button below to start a new game.</string>
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hzC-RM-TWc">
-                                <rect key="frame" x="175.66666666666674" y="441.66666666666674" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hzC-RM-TWc">
+                                <rect key="frame" x="175.66666666666666" y="440.66666666666669" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -179,10 +193,10 @@ Please tap the button below to start a new game.</string>
         <!--Navigation Controller-->
         <scene sceneID="b7b-YD-41S">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bsp-Hi-4uO" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="bsp-Hi-4uO" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="F7b-az-7zb">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

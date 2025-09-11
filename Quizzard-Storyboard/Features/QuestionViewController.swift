@@ -8,6 +8,7 @@ import UIKit
 
 class QuestionViewController: UIViewController {
     
+    @IBOutlet weak var questionNumberLabel: UILabel!
     @IBOutlet weak var questionTextLabel: UILabel!
     @IBOutlet weak var firstAnswerButton: AnswerButton!
     @IBOutlet weak var secondAnswerButton: AnswerButton!
@@ -19,8 +20,6 @@ class QuestionViewController: UIViewController {
     
 //    var delegate: QuestionViewControllerDelegate?
     
-//    var questions: [Question] = []
-    
     var quizData: QuizData? = nil
     
     private let correctAnswerIndex = Int.random(in: 0...3)
@@ -31,7 +30,7 @@ class QuestionViewController: UIViewController {
         
         guard let quizData = quizData else { return }
         
-        title = "Question: \(quizData.currentQuestionNumber)"
+        questionNumberLabel.text = "Question \(quizData.currentQuestionNumber)"
         questionTextLabel.text = quizData.currentQuestion.question.text
         
         var allAnswers = quizData.currentQuestion.incorrectAnswers

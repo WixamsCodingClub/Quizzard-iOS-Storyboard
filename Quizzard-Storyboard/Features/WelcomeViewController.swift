@@ -23,7 +23,7 @@ class WelcomeViewController: UIViewController {
                 self.questions = questions
                 self.performSegue(withIdentifier: "Start_Quiz_Segue", sender: nil)
             case .failure(let error):
-                ()
+                UIAlertController.q_showErrorAlert(error: error, from: self)
             }
         }
         

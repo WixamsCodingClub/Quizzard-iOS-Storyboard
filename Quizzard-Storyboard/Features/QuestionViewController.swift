@@ -1,11 +1,6 @@
 
 import UIKit
 
-//protocol QuestionViewControllerDelegate {
-//    func questionViewControllerDidAnswerCorrectly(_ viewController: QuestionViewController)
-//    func questionViewControllerDidAnswerInorrectly(_ viewController: QuestionViewController)
-//}
-
 class QuestionViewController: UIViewController {
     
     @IBOutlet weak var questionNumberLabel: UILabel!
@@ -16,9 +11,6 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var fourthAnswerButton: AnswerButton!
     
     @IBOutlet weak var nextQuestionButton: UIButton!
-    
-    
-//    var delegate: QuestionViewControllerDelegate?
     
     var quizData: QuizData? = nil
     

@@ -23,8 +23,14 @@ class QuizData {
         return currentQuestionIndex >= questions.count
     }
     
+    /// Returns the current score as a `String` in the format "5 / 10"
     var score: String {
         return "\(correctAnswers) / \(questions.count)"
+    }
+    
+    /// Returns the current score as a percentage.
+    var percentage: Float {
+        return Float(correctAnswers) / Float(questions.count) * 100.0
     }
     
     /// Increments the running score and sets the current question number

@@ -18,13 +18,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quizzard" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V9u-t0-GHO">
-                                <rect key="frame" x="20" y="158" width="353" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <rect key="frame" x="20" y="158" width="353" height="40.666666666666657"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fhm-Tf-Dji">
-                                <rect key="frame" x="40" y="236" width="313" height="122"/>
+                                <rect key="frame" x="40" y="228.66666666666663" width="313" height="122"/>
                                 <string key="text">Welcome to Quizzard, the fun trivia game developed by the Wixams Coding Club.
 
 Please tap the button below to start a new game.</string>
@@ -33,7 +33,7 @@ Please tap the button below to start a new game.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sJe-Vf-gee">
-                                <rect key="frame" x="146.33333333333334" y="398" width="100.33333333333334" height="35"/>
+                                <rect key="frame" x="146.33333333333334" y="390.66666666666669" width="100.33333333333334" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Start Quiz"/>
                                 <connections>
@@ -171,12 +171,19 @@ Please tap the button below to start a new game.</string>
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hzC-RM-TWc">
-                                <rect key="frame" x="175.66666666666666" y="440.66666666666669" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Results" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vlS-HH-9c0" userLabel="Heading Label">
+                                <rect key="frame" x="106.33333333333333" y="158" width="180.33333333333337" height="40.666666666666657"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tSH-tm-Zkh" customClass="MBCircularProgressBarView">
+                                <rect key="frame" x="59" y="228.66666666666663" width="275" height="275"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="tSH-tm-Zkh" secondAttribute="height" multiplier="1:1" id="FXN-Xg-XN7"/>
+                                </constraints>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0o-ro-hse" userLabel="Done Button">
                                 <rect key="frame" x="164" y="749" width="65" height="35"/>
                                 <state key="normal" title="Button"/>
@@ -185,17 +192,30 @@ Please tap the button below to start a new game.</string>
                                     <action selector="doneButtonTapped:" destination="DbI-AB-d3k" eventType="touchUpInside" id="RCB-ec-uU6"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hzC-RM-TWc">
+                                <rect key="frame" x="39.333333333333343" y="523.66666666666663" width="314.33333333333326" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Qvu-ik-dZZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="tSH-tm-Zkh" firstAttribute="width" secondItem="Qvu-ik-dZZ" secondAttribute="width" multiplier="0.7" id="3xC-FX-dUJ"/>
                             <constraint firstItem="hzC-RM-TWc" firstAttribute="centerX" secondItem="Qvu-ik-dZZ" secondAttribute="centerX" id="4mT-LX-rGG"/>
+                            <constraint firstItem="tSH-tm-Zkh" firstAttribute="centerX" secondItem="Qvu-ik-dZZ" secondAttribute="centerX" id="8hH-MQ-dB3"/>
+                            <constraint firstItem="hzC-RM-TWc" firstAttribute="top" secondItem="tSH-tm-Zkh" secondAttribute="bottom" constant="20" id="DMQ-cA-v5C"/>
+                            <constraint firstItem="hzC-RM-TWc" firstAttribute="width" secondItem="Hpe-BS-8Qk" secondAttribute="width" multiplier="0.8" id="P8i-GN-dIJ"/>
+                            <constraint firstItem="vlS-HH-9c0" firstAttribute="top" secondItem="Qvu-ik-dZZ" secondAttribute="top" constant="40" id="PrG-dZ-Jt6"/>
                             <constraint firstItem="g0o-ro-hse" firstAttribute="centerX" secondItem="Qvu-ik-dZZ" secondAttribute="centerX" id="R2M-zU-D8S"/>
                             <constraint firstItem="Qvu-ik-dZZ" firstAttribute="bottom" secondItem="g0o-ro-hse" secondAttribute="bottom" id="dO2-JV-Qcv"/>
-                            <constraint firstItem="hzC-RM-TWc" firstAttribute="centerY" secondItem="Qvu-ik-dZZ" secondAttribute="centerY" id="lM2-sN-RuS"/>
+                            <constraint firstItem="vlS-HH-9c0" firstAttribute="centerX" secondItem="Qvu-ik-dZZ" secondAttribute="centerX" id="jPy-UR-A4U"/>
+                            <constraint firstItem="tSH-tm-Zkh" firstAttribute="top" secondItem="vlS-HH-9c0" secondAttribute="bottom" constant="30" id="uf8-Va-314"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="circularProgressBarView" destination="tSH-tm-Zkh" id="Qe3-Rw-zYM"/>
                         <outlet property="scoreLabel" destination="hzC-RM-TWc" id="cfF-TT-d3A"/>
                     </connections>
                 </viewController>

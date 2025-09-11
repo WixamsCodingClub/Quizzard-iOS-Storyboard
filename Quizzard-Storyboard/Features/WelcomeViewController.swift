@@ -35,6 +35,7 @@ class WelcomeViewController: UIViewController {
               let questions = questions else { return }
         
         questionVC.quizData = QuizData(questions: questions)
+        self.questions = nil
     }
     
 }

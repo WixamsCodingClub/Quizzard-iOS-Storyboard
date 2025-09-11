@@ -189,6 +189,7 @@
 				TargetAttributes = {
 					355228972D95BB0E0010D846 = {
 						CreatedOnToolsVersion = 16.2;
+						LastSwiftMigration = 1640;
 					};
 					355228AD2D95BB100010D846 = {
 						CreatedOnToolsVersion = 16.2;
@@ -288,6 +289,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N79ZG6RW8C;
@@ -308,6 +310,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wixamscodingclub.Quizzard-Storyboard";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Quizzard-Storyboard/Quizzard-Storyboard-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -318,6 +322,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N79ZG6RW8C;
@@ -338,6 +343,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wixamscodingclub.Quizzard-Storyboard";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Quizzard-Storyboard/Quizzard-Storyboard-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

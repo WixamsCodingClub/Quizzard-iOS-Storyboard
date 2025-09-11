@@ -26,7 +26,6 @@ class WelcomeViewController: UIViewController {
                 UIAlertController.q_showErrorAlert(error: error, from: self)
             }
         }
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -39,29 +38,3 @@ class WelcomeViewController: UIViewController {
     }
     
 }
-
-// MARK: - Private
-
-extension WelcomeViewController {
-    
-//    private func startQuiz(with questions: [Question]) {
-//        
-//        performSegue(withIdentifier: "Start_Quiz_Segue", sender: nil)
-//        
-//        
-////        quizManager = QuizManager(viewController: self, questions: questions)
-////        quizManager?.delegate = self
-////        quizManager?.start()
-//    }
-    
-}
-
-// MARK: - QuizManagerDelegate
-
-//extension WelcomeViewController: QuizManagerDelegate {
-//    
-////    func quizManagerDidFinish(_ manager: QuizManager) {
-////        quizManager = nil
-////    }
-//    
-//}

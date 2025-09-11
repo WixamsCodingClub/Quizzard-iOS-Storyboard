@@ -17,7 +17,7 @@ extension UIAlertController {
         q_showAlert(title: "Error", message: error.localizedDescription, from: viewController, completion: completion)
     }
     
-    static func showChoiceAlert(title: String? = nil, message: String? = nil, actionSheet: Bool = false, positiveButtonTitle: String = "OK", negativeButtonTitle: String = "Cancel", from viewController: UIViewController, completion: @escaping ((Bool) -> Void)) {
+    static func q_showChoiceAlert(title: String? = nil, message: String? = nil, positiveButtonTitle: String = "OK", negativeButtonTitle: String = "Cancel", from viewController: UIViewController, completion: @escaping ((Bool) -> Void)) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.q_addAction(title: positiveButtonTitle, style: .default) {
             completion(true)

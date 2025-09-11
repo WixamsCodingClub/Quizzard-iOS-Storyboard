@@ -122,7 +122,7 @@ Please tap the button below to start a new game.</string>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A0y-Ap-0GK">
                                 <rect key="frame" x="166.66666666666666" y="783.66666666666663" width="59.666666666666657" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Next"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Next"/>
                                 <connections>
                                     <action selector="nextButtonTapped:" destination="suZ-UT-au9" eventType="touchUpInside" id="3fn-N1-bOg"/>
                                 </connections>
@@ -131,6 +131,9 @@ Please tap the button below to start a new game.</string>
                                 <rect key="frame" x="8" y="59" width="92.333333333333329" height="34.333333333333343"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="End Quiz"/>
+                                <connections>
+                                    <action selector="endQuizButtonTapped:" destination="suZ-UT-au9" eventType="touchUpInside" id="2xu-nR-eA3"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jIC-xX-Res"/>
@@ -174,11 +177,21 @@ Please tap the button below to start a new game.</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0o-ro-hse" userLabel="Done Button">
+                                <rect key="frame" x="164" y="749" width="65" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Done"/>
+                                <connections>
+                                    <action selector="doneButtonTapped:" destination="DbI-AB-d3k" eventType="touchUpInside" id="RCB-ec-uU6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Qvu-ik-dZZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="hzC-RM-TWc" firstAttribute="centerX" secondItem="Qvu-ik-dZZ" secondAttribute="centerX" id="4mT-LX-rGG"/>
+                            <constraint firstItem="g0o-ro-hse" firstAttribute="centerX" secondItem="Qvu-ik-dZZ" secondAttribute="centerX" id="R2M-zU-D8S"/>
+                            <constraint firstItem="Qvu-ik-dZZ" firstAttribute="bottom" secondItem="g0o-ro-hse" secondAttribute="bottom" id="dO2-JV-Qcv"/>
                             <constraint firstItem="hzC-RM-TWc" firstAttribute="centerY" secondItem="Qvu-ik-dZZ" secondAttribute="centerY" id="lM2-sN-RuS"/>
                         </constraints>
                     </view>

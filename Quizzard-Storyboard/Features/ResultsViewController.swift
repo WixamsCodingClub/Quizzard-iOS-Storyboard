@@ -14,5 +14,9 @@ class ResultsViewController: UIViewController {
         
         scoreLabel.text = "You scored " + quizData.score
     }
+    
+    @IBAction func doneButtonTapped(_ sender: Any) {
+        navigationController?.dismiss(animated: true)
+    }
 
 }

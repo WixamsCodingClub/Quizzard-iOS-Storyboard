@@ -46,6 +46,14 @@ class QuestionViewController: UIViewController {
         nextQuestionButton.isEnabled = false
     }
     
+    @IBAction func endQuizButtonTapped(_ sender: Any) {
+        UIAlertController.q_showChoiceAlert(message: "Are you sure you wish to end the quiz?", positiveButtonTitle: "Yes", negativeButtonTitle: "No", from: self) { choice in
+            if choice {
+                self.navigationController?.dismiss(animated: true)
+            }
+        }
+    }
+    
     @IBAction func answerButtonTapped(_ sender: Any) {
         
         guard let selectedButton = sender as? AnswerButton, let selectedButtonIndex = allAnswerButtons.firstIndex(of: selectedButton) else { return }
